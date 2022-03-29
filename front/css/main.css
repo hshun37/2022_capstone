@@ -1,0 +1,200 @@
+/* 전체 */
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+/* 헤더 */
+.header {
+  border-bottom: 1px solid rgb(231, 231, 231);
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .logo {
+  justify-content: start;
+  margin-left: 80px;
+  font-size: 32px;
+}
+.header .logo a:hover {
+  color: gray;
+}
+.header .menu {
+  display: flex;
+  margin-right: 10px;
+  font-size: 18px;
+}
+.header .menu a {
+  margin-right: 40px;
+  color: gray;
+}
+.header .menu a:hover {
+  color: #000;
+}
+.header .menu .none_btn {
+  padding-top: 5px;
+}
+.header .menu .login:hover,
+.header .menu .signup:hover {
+  color: #fff;
+}
+
+
+/* 메인화면 시작 */
+.main_box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* 우측화면 */
+.main_box .main_right {
+  width: 50%;
+}
+/* 검색창(우측화면) */
+.main_right .section_01 {
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main_right .section_01 .right-side {
+  margin-top: 30px;
+}
+.main_right .section_01 .right-side .search {
+  position: relative;
+}
+.main_right .section_01 .right-side .search input {
+  font-size: 14px;
+}
+.main_right .section_01 .right-side > input {
+  width: 50%;
+  height: 30px;
+  border: 1px solid #bbb;
+  border-radius: 8px;
+  padding: 10px 0px;
+  padding-left: 15px;
+  font-size: 14px;
+  outline: none;
+}
+.main_right .section_01 .right-side > img {
+  position: absolute;
+  width: 22px;
+  top: 15px;
+  right: 12px;
+  margin: 0;
+}
+/* 카카오 API(우측화면) */
+.main_right .section_02 {
+  /* border: 1px solid black; */
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main_right .section_02 .left-side {
+  border: 1px solid #000;
+}
+.main_right .section_02 .kakao {
+  
+}
+
+
+/* 좌측화면 */
+.main_box .main_left {
+  /* width: 50%; */
+}
+/* mini공지사항(좌측화면) */
+.main_left .main_announcement {
+  width: 500px;
+  height: 300px;
+  border: 1px solid black;
+}
+/* mini게시판(좌측화면) */
+.main_left .main_board {
+  width: 500px;
+  height: 300px;
+  border: 1px solid black;
+}
+/* 푸터 */
+.footer {
+  padding-top: 100px;
+}
+.footer_02 {
+  border-top: 1px solid rgb(231, 231, 231);
+  /* background-color: #272727; */
+}
+footer {
+  border-top: 1px solid #333;
+}
+footer .inner {
+  padding: 40px 0 60px 0;
+}
+footer .menu {
+  display: flex;
+  justify-content: center;
+
+}
+footer .menu li {
+  position: relative;
+}
+footer .menu li::before {
+  content: "";
+  width: 3px;
+  height: 3px;
+  background-color: #555;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -1px;
+  margin: auto;
+}
+footer .menu li:last-child::before {
+  display: none;
+}
+footer .menu li a {
+  color: #ccc;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 15px;
+  display: block;
+}
+footer .menu li a.blue {
+  color: #0000FF;
+}
+footer .btn-group {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+footer .btn-group .btn {
+  font-size: 12px;
+  margin-right: 10px;
+}
+footer .btn-group .btn:last-child {
+  margin-right: 0;
+}
+footer .info {
+  margin-top: 30px;
+  text-align: center;
+}
+footer .info span {
+  margin-right: 20px;
+  color: #999;
+  font-size: 12px;
+}
+footer .info span:last-child {
+  margin-right: 0;
+}
+footer .copyright {
+  color: #999;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 12px;
+}
+footer .logo {
+  margin: 30px auto 0;
+}
