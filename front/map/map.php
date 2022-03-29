@@ -24,8 +24,8 @@
 
   <section>
     <div class="map_container">
-      <div class="map_kakao">
 
+      <div class="map_kakao">
         <!-- kakao Map 매물 데이터 메뉴 -->
         <div class="map_menu">
           <div class="map_side">
@@ -59,13 +59,51 @@
         </div>
 
         <div class="loop-bilding" style="overflow-y:auto; overflow-x:hidden; width:100%; height:810px;">
-          <ul id="loop">
-            <li class="loop">
-              <div>이름: </div>
-              <div>가격: </div>
-              <div>날짜: </div>
-              <div>원/투룸: </div>
-              <div>전/월세: </div>
+          <ul>
+            <li>
+              <ul>
+                <li>이름: </li>
+                <li>가격: </li>
+                <li>날짜: </li>
+                <li>원/투룸: </li>
+                <li>월/전세: </li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li>이름: </li>
+                <li>가격: </li>
+                <li>날짜: </li>
+                <li>원/투룸: </li>
+                <li>월/전세: </li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li>이름: </li>
+                <li>가격: </li>
+                <li>날짜: </li>
+                <li>원/투룸: </li>
+                <li>월/전세: </li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li>이름: </li>
+                <li>가격: </li>
+                <li>날짜: </li>
+                <li>원/투룸: </li>
+                <li>월/전세: </li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li>이름: </li>
+                <li>가격: </li>
+                <li>날짜: </li>
+                <li>원/투룸: </li>
+                <li>월/전세: </li>
+              </ul>
             </li>
           </ul>
         </div>
