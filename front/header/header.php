@@ -16,11 +16,11 @@ if (isset($_SESSION['id'])) {
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>디쿠방</title>
-	<link rel="stylesheet" href="./css/btn.css">
-	<link rel="stylesheet" href="./css/main.css">
+	<link rel="stylesheet" href="../../front/css/btn.css?gg">
+	<link rel="stylesheet" href="../../front/css/main.css?gg">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<script defer src="./js/main.js"></script>
+	<script defer src="../../front/js/main.js"></script>
 </head>
 
 <!--헤더 시작-->
@@ -47,6 +47,9 @@ if (isset($_SESSION['id'])) {
 				</a>
 				<a href="../../front/board/board.php" class="none_btn">
 					<span class="material-icons">assignment</span>게시판
+				</a>
+				<a href="../../front/noti/noti.php" class="none_btn">
+					<span class="material-icons">notifications</span>공지사항
 				</a>
 				<?php if ("" === $name) { ?>
 					<a href="../../front/login/login.php" class="login btn">로그인</a>

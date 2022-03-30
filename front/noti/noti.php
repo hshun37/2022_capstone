@@ -10,9 +10,9 @@ session_start();
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>디쿠방</title>
   <link rel="stylesheet" rel="icon" href="/favicon.ico">
-  <link rel="stylesheet" href="../css/btn.css?after">
-  <link rel="stylesheet" href="../css/main.css?after">
-  <link rel="stylesheet" href="../css/board.css?after">
+  <link rel="stylesheet" href="../../front/css/btn.css?after">
+  <link rel="stylesheet" href="../../front/css/main.css?after">
+  <link rel="stylesheet" href="../../front/css/board.css?after">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
@@ -23,11 +23,10 @@ session_start();
   <?php include "../../front/header/header.php" ?>
   <!--헤더 끝-->
 
-
   <section>
 
     <div class="title">
-      <h2>자유게시판</h2>
+      <h2>공지사항</h2>
     </div>
 
     <div class="board_list_wrap">
@@ -43,7 +42,7 @@ session_start();
         </thead>
         <tbody>
 				<?php
-				include("../../api/router/bbs/bbsList.php");
+        
 				?>
 				</tobdy>
       </table>
