@@ -38,7 +38,6 @@
         <p class="copyright" style="color:rgb(0, 0, 255)">
           &copy; <span class="this-year"></span> Daegu Catholic University. Capstone Design 대가대직방.
         </p>
-        <img src="./images/starbucks_logo_only_text.png" alt="" class="logo" />
 
       </div>
     </div>

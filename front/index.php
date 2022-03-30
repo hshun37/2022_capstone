@@ -6,73 +6,92 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>디쿠방</title>
-  <link rel="stylesheet" rel="icon" href="/favicon.ico">
-  <link rel="stylesheet" href="./css/main.css">
-  <link rel="stylesheet" href="./css/btn.css?aa">
-  <link rel="stylesheet" href="./css/main_kakaoApi.css?aa">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+
+  <!-- CSS 초기화 CDN 적용 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Lodash -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- GSAP & ScrollToPlugin -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollToPlugin.min.js" integrity="sha512-agNfXmEo6F+qcj3WGryaRvl9X9wLMQORbTt5ACS9YVqzKDMzhRxY+xjgO45HCLm61OwHWR1Oblp4QSw/SGh9SA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- SCROLL MAGIC -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <link rel="stylesheet" rel="icon" href="../favicon.ico">
+  <link rel="stylesheet" href="../front/css/main.css?oo">
+  <link rel="stylesheet" href="../front/css/btn.css?hh">
+  <link rel="stylesheet" href="../front/css/main_kakaoApi.css?iioo">
+  <link rel="stylesheet" href="../front/css/main_animation.css?ff">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script defer src="../front/js/main.js?pp"></script>
 </head>
 
-<?php include "../front/header/header.php" ?>
+<!--헤더 부분 시작-->
+<header>
+  <?php include "../front/header/header.php" ?>
+</header>
+<!--헤더 부분 끝-->
 
 
-<section>
+<!--메인 화면 시작-->
 
-  <!--메인 화면 시작-->
-  <div class="main_box">
-
-    <!--우측 화면 시작-->
-    <div class="main_right">
-      <!--검색창 시작-->
-      <div class="section_01">
-        <div class="right-side">
-          <div class="search">
-            <input type="text" placeholder="원하는 매물을 검색하세요!">
-            <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png">
-          </div>
-        </div>
-      </div>
-      <!--검색창 끝-->
-
-      <!--카카오 API 시작-->
-      <div class="section_02">
-        <!--카카오맵 시작-->
-        <div class="left-side">
-          <div class="kakao">
-            <div id="map"></div>
-            <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=605db5303d35869f7dea1bc7ebc32ea0"></script>
-            <script src="./js/kakao.js"></script>
-          </div>
-        </div>
-        <!--카카오맵 끝-->
-      </div>
-      <!--카카오 API 끝-->
+<!--디쿠방에 오신것을 환영합니다!-->
+<section class="scroll-spy dcu-room">
+  <!--디쿠방에 오신것을 환영합니다!-->
+  <div class="duc_ment back-to-position delay-1">
+    <div class="loading">
+      <span>디</span><span>쿠</span>
+      <span>방</span><span>에&nbsp;</span>
+      <span>오</span><span>신</span>
+      <span>것</span><span>을&nbsp;</span>
+      <span>환</span><span>영</span>
+      <span>합</span><span>니</span>
+      <span>다</span><span>!</span>
     </div>
-    <!--우측 화면 끝-->
-
-
-    <!--좌측 화면 시작-->
-    <!-- <div class="main_left">
-      <div class="main_announcement">
-
-      </div>
-
-      <div class="main_board">
-
-      </div>
-    </div> -->
-    <!--좌측 화면 끝-->
-
-
-
   </div>
-  <!--메인 화면 끝-->
+</section>
+<!--디쿠방에 오신것을 환영합니다!-->
 
+
+<!--카카오 API 시작-->
+<section class="scroll-spy kakao-api">
+  <div class="dcu-room-ment">
+    <h1 class=" back-to-position to-left delay-1"><p>디쿠방</p>으로 원하는&nbsp;<p>방</p>을 찾으세요.</h1>
+  </div>
+  <div class="kakao">
+    <div id="map" class="back-to-position to-right delay-2"></div>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=605db5303d35869f7dea1bc7ebc32ea0"></script>
+    <script src="../front/js/kakao.js"></script>
+  </div>
+</section>
+<!--카카오 API 끝-->
+
+
+<!--미니 자유게시판-->
+<section class="scroll-spy mini-board">
+  <div class="board-ment">
+    <h1 class="back-to-position to-right delay-1"><p>자유롭게</p>&nbsp;소통 할 준비가 되셨나요?</h1>
+  </div>
 </section>
 
 
-<?php include "../front/footer/footer.php" ?>
+
+
+<!--메인 화면 끝-->
+
+
+<!--푸터 부분 시작-->
+<footer>
+  <?php include "../front/footer/footer.php" ?>
+</footer>
+<!--푸터 부분 끝-->
+
+<div id="to-top">
+  <div class="material-icons">arrow_upward</div>
+</div>
 
 </body>
 

@@ -42,7 +42,7 @@ session_start();
         </thead>
         <tbody>
 				<?php
-        
+        include("../../api/router/bbs/bbsList.php");
 				?>
 				</tobdy>
       </table>
