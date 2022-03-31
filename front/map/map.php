@@ -7,9 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>디쿠방</title>
   <link rel="stylesheet" rel="icon" href="/favicon.ico">
-  <link rel="stylesheet" href="../css/btn.css?aa">
-  <link rel="stylesheet" href="../css/main.css?aa">
-  <link rel="stylesheet" href="../css/map.css?yy">
+  <link rel="stylesheet" href="../../front/css/btn.css?gg">
+  <link rel="stylesheet" href="../../front/css/main.css?aa">
+  <link rel="stylesheet" href="../../front/css/map.css?yy">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

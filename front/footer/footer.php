@@ -31,7 +31,6 @@
         <div class="info">
           <span>팀명 &colon; 대가대직방</span>
           <span>팀장 &colon; 김장현 &verbar; 조원 &colon; 신영호, 유선기, 홍성훈</span>
-          <span>TEL &colon; 010-1234-5678</span>
           <span>개인정보 책임자 &colon; 대가대직방</span>
         </div>
 

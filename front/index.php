@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+if (isset($_SESSION['id'])) {
+	$name = $_SESSION['name'];
+} else {
+	$name = "";
+}
+?>
+
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -21,19 +31,84 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <link rel="stylesheet" rel="icon" href="../favicon.ico">
-  <link rel="stylesheet" href="../front/css/main.css?oo">
-  <link rel="stylesheet" href="../front/css/btn.css?hh">
-  <link rel="stylesheet" href="../front/css/main_kakaoApi.css?iioo">
-  <link rel="stylesheet" href="../front/css/main_animation.css?ff">
+  <link rel="stylesheet" href="../front/css/main.css?hhh">
+  <link rel="stylesheet" href="../front/css/btn.css?hhh">
+  <link rel="stylesheet" href="../front/css/main_kakaoApi.css?hhh">
+  <link rel="stylesheet" href="../front/css/main_animation.css?hhh">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <script defer src="../front/js/main.js?pp"></script>
+  <script defer src="../front/js/main.js?hhh"></script>
 </head>
 
 <!--헤더 부분 시작-->
 <header>
-  <?php include "../front/header/header.php" ?>
+	<div class="container">
+		<div class="header" style="border-bottom: none;">
+			<!--대가대직방 로고-->
+			<div>
+				<span class="logo">
+					<a href="../../front/index.php">디쿠방</a>
+				</span>
+			</div>
+			<!--대가대직방 로고-->
+			<!--메뉴 시작-->
+			<span class="menu">
+				<div class="menu-text">
+					<a href="../../front/map/map.php">
+						<!-- <span class="material-icons">location_on</span> -->
+						지도
+					</a>
+				</div>
+				<div class="menu-text">
+					<a href="javascript:void(0)">
+						<!-- <span class="material-icons">home</span> -->
+						원룸
+					</a>
+				</div>
+				<div class="menu-text">
+					<a href="javascript:void(0)">
+						<!-- <span class="material-icons">maps_home_work</span> -->
+						투룸
+					</a>
+				</div>
+				<div class="menu-text">
+					<a href="../../front/board/board.php">
+						<!-- <span class="material-icons">assignment</span> -->
+						자유게시판
+					</a>
+				</div>
+				<div class="menu-text">
+					<a href="../../front/noti/noti.php">
+						<!-- <span class="material-icons">notifications</span> -->
+						공지사항
+					</a>
+				</div>
+				<?php if ("" === $name) { ?>
+					<div>
+						<a href="../../front/login/login.php" class="login btn">로그인</a>
+					</div>
+					<div>
+						<a href="../../front/signup/signup.php" class="signup btn">회원가입</a>
+					</div>
+				<?php } else { ?>
+					<div class="menu-text">
+						<span><a href="../../front/myPage/myPage.php">
+							<?php echo "$name" ?>님</a>
+						</span>
+					</div>
+					<div>
+						<a href="../../api/router/auth/logout.php" class="signup btn">로그아웃</a>
+					</div>
+				<?php } ?>
+			</span>
+			<!--메뉴 끝-->
+
+		</div>
+	</div>
 </header>
 <!--헤더 부분 끝-->
+
+
+
 
 
 <!--메인 화면 시작-->
@@ -59,7 +134,7 @@
 <!--카카오 API 시작-->
 <section class="scroll-spy kakao-api">
   <div class="dcu-room-ment">
-    <h1 class=" back-to-position to-left delay-1"><p>디쿠방</p>으로 원하는&nbsp;<p>방</p>을 찾으세요.</h1>
+    <h1 class=" back-to-position to-left delay-1"><p>디쿠방</p>에서 원하는&nbsp;<p>방</p>을 찾으세요.</h1>
   </div>
   <div class="kakao">
     <div id="map" class="back-to-position to-right delay-2"></div>
@@ -78,9 +153,9 @@
 </section>
 
 
-
-
 <!--메인 화면 끝-->
+
+
 
 
 <!--푸터 부분 시작-->
@@ -89,9 +164,15 @@
 </footer>
 <!--푸터 부분 끝-->
 
+
+
+<!--최상단 이동-->
 <div id="to-top">
   <div class="material-icons">arrow_upward</div>
 </div>
+<!--최상단 이동-->
+
+
 
 </body>
 

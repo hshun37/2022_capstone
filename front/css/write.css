@@ -1,0 +1,107 @@
+.board_wrap {
+  width: 80%;
+  margin: 100px auto;
+}
+
+.board_title {
+  margin: 60px 0;
+  /* margin-bottom: 60px; */
+}
+
+.board_title > strong {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.board_title > p {
+  margin-top: 5px;
+  font-size: 1.0rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bt_wrap {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bt_wrap > a {
+  margin: 0 5px;
+}
+
+.board_write {
+  border-top: 2px solid blue;
+}
+
+.board_write .title,
+.board_write .info {
+  padding: 15px;
+}
+
+.board_write .info {
+  border-top: 1px dashed #ddd;
+  border-bottom: 1px solid #000;
+  font-size: 0;
+}
+
+.board_write .title dl {
+  font-size: 0;
+}
+
+.board_write .info dl {
+  display: inline-block;
+  width: 50%;
+  vertical-align: middle;
+}
+
+.board_write .title dt,
+.board_write .title dd,
+.board_write .info dt,
+.board_write .info dd {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1.2rem;
+}
+
+.board_write .title dt,
+.board_write .info dt {
+  width: 100px;
+}
+
+.board_write .title dd {
+  width: calc(100% - 100px);
+}
+
+.board_write .title input[type="text"],
+.board_write .info input[type="text"],
+.board_write .info input[type="password"] {
+  padding: 10px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.board_write .title input[type="text"] {
+  width: 80%;
+  outline: none;
+}
+
+.board_write .cont {
+  border-bottom: 1px solid #000;
+}
+
+.board_write .cont textarea {
+  display: block;
+  width: 100%;
+  height: 300px;
+  padding: 15px;
+  box-sizing: border-box;
+  border: 0;
+  resize: vertical;
+  outline: none;
+}

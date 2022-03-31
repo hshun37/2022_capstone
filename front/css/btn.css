@@ -50,3 +50,11 @@
   color: #333;
   background-color: #fff;
 }
+.btn.btn--blue {
+  color: blue;
+  border-color: blue;
+}
+.btn.btn--blue:hover {
+  color: #fff;
+  background-color: blue;
+}

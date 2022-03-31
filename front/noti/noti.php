@@ -10,9 +10,9 @@ session_start();
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>디쿠방</title>
   <link rel="stylesheet" rel="icon" href="/favicon.ico">
-  <link rel="stylesheet" href="../../front/css/btn.css?after">
-  <link rel="stylesheet" href="../../front/css/main.css?after">
-  <link rel="stylesheet" href="../../front/css/board.css?after">
+  <link rel="stylesheet" href="../../front/css/btn.css?aaa">
+  <link rel="stylesheet" href="../../front/css/main.css?aaa">
+  <link rel="stylesheet" href="../../front/css/board.css?aaa">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
@@ -52,6 +52,9 @@ session_start();
         <a href="#" class="num on">1</a>
         <a href="#" class="bt">다음 페이지</a>
         <a href="#" class="bt">마지막 페이지</a>
+      </div>
+      <div class="registration">
+        <a href="javascript:void(0);" class="btn btn--blue">글쓰기</a>
       </div>
     </div>
   </section>
