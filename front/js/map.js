@@ -1,3 +1,46 @@
+const allRoom = document.querySelector('.all-room');
+const oneRoom = document.querySelector('.one-room');
+const twoRoom = document.querySelector('.two-room');
+
+const allRoomDe = document.querySelector('.all-room-detail');
+const oneRoomDe = document.querySelector('.one-room-detail');
+const twoRoomDe = document.querySelector('.two-room-detail');
+
+function allRoom_open() {
+  if(allRoomDe.style.display=='none'){
+		allRoomDe.style.display = 'block';
+    oneRoomDe.style.display = 'none';
+		twoRoomDe.style.display = 'none';
+	}else{
+		allRoomDe.style.display = 'block';
+    oneRoomDe.style.display = 'none';
+		twoRoomDe.style.display = 'none';
+	}
+}
+function oneRoom_open() {
+  if(oneRoomDe.style.display=='none'){
+		oneRoomDe.style.display = 'block';
+    allRoomDe.style.display = 'none';
+		twoRoomDe.style.display = 'none';
+	}else{
+		oneRoomDe.style.display = 'block';
+    allRoomDe.style.display = 'none';
+		twoRoomDe.style.display = 'none';
+	}
+}
+function twoRoom_open() {
+  if(twoRoomDe.style.display=='none'){
+		twoRoomDe.style.display = 'block';
+    allRoomDe.style.display = 'none';
+		oneRoomDe.style.display = 'none';
+	}else{
+		twoRoomDe.style.display = 'block';
+    allRoomDe.style.display = 'none';
+		oneRoomDe.style.display = 'none';
+	}
+}
+
+
 // (() => {
 //   const $ul = document.querySelector('ul');
 //   let $li = document.querySelector('li:last-child');
