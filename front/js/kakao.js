@@ -8,7 +8,7 @@ var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니
 var markerPosition = new kakao.maps.LatLng(35.909734775051504, 128.81796715333087);
 
 var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
-// 마커를 생성합니다
+// 마커를 생성합니다s
 var marker = new kakao.maps.Marker({
     position: markerPosition
 });

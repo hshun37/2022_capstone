@@ -1,0 +1,290 @@
+/**** 전체 ****/
+a {
+  color: #000;
+  text-decoration: none;
+}
+section {
+  width: 100%;
+}
+.container {
+  position: relative;
+}
+/* SCROLL MAGIC 사용 */
+.back-to-position {
+  opacity: 0;
+  transition: 1s; /* 전환시간 */
+}
+.back-to-position.to-right {
+  transform: translateX(-150px);
+}
+.back-to-position.to-left {
+  transform: translateX(150px);
+}
+.show .back-to-position {
+  opacity: 1;
+  transform: translateX(0);
+}
+.show .back-to-position.delay-0 {
+  transition-delay: 0s;
+}
+.show .back-to-position.delay-1 {
+  transition-delay: 0.3s;
+}
+.show .back-to-position.delay-2 {
+  transition-delay: 0.6s;
+}
+.show .back-to-position.delay-3 {
+  transition-delay: 0.9s;
+}
+.show .back-to-position.delay-4 {
+  transition-delay: 1.2s;
+}
+.show .back-to-position.delay-5 {
+  transition-delay: 1.5s;
+}
+.show .back-to-position.delay-6 {
+  transition-delay: 1.7s;
+}
+.show .back-to-position.delay-7 {
+  transition-delay: 2s;
+}
+.show .back-to-position.delay-8 {
+  transition-delay: 2.3s;
+}
+/* 페이지를 상단으로 이동 시키는 코드 */
+#to-top {
+  width: 42px;
+  height: 42px;
+  background-color: #333;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed; /* 뷰포트 기준으로 계산한다. */
+  bottom: 30px;
+  right: 30px;
+  z-index: 9;
+}
+/**** 헤더 ****/
+.header {
+  border-bottom: 1px solid rgb(231, 231, 231);
+  width: 100%;
+  height: 72px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .logo {
+  justify-content: start;
+  margin-left: 80px;
+  font-size: 32px;
+}
+
+.header .logo a:hover {
+  color: gray;
+}
+
+.header .menu {
+  display: flex;
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.header .menu > div > a {
+  margin-right: 25px;
+  color: #000;
+}
+
+.header .menu > div > a:hover {
+  color: #000;
+}
+
+.menu-text {
+  font-size: 16px;
+  margin-top: 13px;
+}
+
+.header .menu .login:hover,
+.header .menu .signup:hover {
+  color: #fff;
+}
+
+
+
+/**** 메인화면 시작 ****/
+
+/* 디쿠방에 오신것을 환영합니다! */
+.duc_ment {
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+}
+.duc_ment .loading {
+  margin-bottom: 200px;
+}
+
+.duc_ment .loading > span {
+  font-size: 55px;
+  font-weight: 400;
+  font-style: initial;
+  background: linear-gradient(blue, pink);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* 카카오 API */
+.kakao-api {
+  height: 800px;
+  margin-bottom: 200px;
+}
+.dcu-room-ment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.dcu-room-ment > h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  font-weight: 400;
+}
+.dcu-room-ment > h1 > p {
+  font-size: 44px;
+  font-weight: bold;
+}
+.kakao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*미니 자유게시판*/
+.mini-board {
+  height: 800px;
+}
+.board-ment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.board-ment > h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  font-weight: 400;
+}
+.board-ment > h1 > p {
+  font-size: 55px;
+  font-weight: bold;
+}
+
+
+
+
+/**** 푸터 ****/
+.footer {
+  padding-top: 100px;
+}
+
+.footer_02 {
+  border-top: 1px solid rgb(231, 231, 231);
+  /* background-color: #272727; */
+}
+
+footer {
+  border-top: 1px solid #333;
+}
+
+footer .inner {
+  padding: 40px 0 60px 0;
+}
+
+footer .menu {
+  display: flex;
+  justify-content: center;
+
+}
+
+footer .menu li {
+  position: relative;
+}
+
+footer .menu li::before {
+  content: "";
+  width: 3px;
+  height: 3px;
+  background-color: #555;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -1px;
+  margin: auto;
+}
+
+footer .menu li:last-child::before {
+  display: none;
+}
+
+footer .menu li a {
+  color: #ccc;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 15px;
+  display: block;
+}
+
+footer .menu li a.blue {
+  color: #0000FF;
+}
+
+footer .btn-group {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+footer .btn-group .btn {
+  font-size: 12px;
+  margin-right: 10px;
+}
+
+footer .btn-group .btn:last-child {
+  margin-right: 0;
+}
+
+footer .info {
+  margin-top: 30px;
+  text-align: center;
+}
+
+footer .info span {
+  margin-right: 20px;
+  color: #999;
+  font-size: 12px;
+}
+
+footer .info span:last-child {
+  margin-right: 0;
+}
+
+footer .copyright {
+  color: #999;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 12px;
+}
+
+footer .logo {
+  margin: 30px auto 0;
+}

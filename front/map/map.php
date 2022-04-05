@@ -9,13 +9,13 @@
   <link rel="stylesheet" rel="icon" href="/favicon.ico">
   <link rel="stylesheet" href="../../front/css/btn.css?gg">
   <link rel="stylesheet" href="../../front/css/main.css?aa">
-  <link rel="stylesheet" href="../../front/css/map.css?yy">
+  <link rel="stylesheet" href="../../front/css/map.css?dgdfgfdgdfg">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
   <script defer src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-  <script defer src="../../front/js/map.js?hhh"></script>
+  <!-- <script defer src="../../front/js/map.js?hhh"></script> -->
 </head>
 
 <body>
@@ -45,7 +45,7 @@
           <div class="kakao">
             <div class="kakaoMap_size" id="map"></div>
             <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=605db5303d35869f7dea1bc7ebc32ea0"></script>
-            <script src="../js/kakao.js"></script>
+            <script src="../../front/js/kakao.js"></script>
           </div>
         </div>
       </div>
@@ -60,51 +60,7 @@
 
         <div class="loop-bilding" style="overflow-y:auto; overflow-x:hidden; width:100%; height:810px;">
           <ul>
-            <li>
-              <ul>
-                <li>이름: </li>
-                <li>가격: </li>
-                <li>날짜: </li>
-                <li>원/투룸: </li>
-                <li>월/전세: </li>
-              </ul>
-            </li>
-            <li>
-              <ul>
-                <li>이름: </li>
-                <li>가격: </li>
-                <li>날짜: </li>
-                <li>원/투룸: </li>
-                <li>월/전세: </li>
-              </ul>
-            </li>
-            <li>
-              <ul>
-                <li>이름: </li>
-                <li>가격: </li>
-                <li>날짜: </li>
-                <li>원/투룸: </li>
-                <li>월/전세: </li>
-              </ul>
-            </li>
-            <li>
-              <ul>
-                <li>이름: </li>
-                <li>가격: </li>
-                <li>날짜: </li>
-                <li>원/투룸: </li>
-                <li>월/전세: </li>
-              </ul>
-            </li>
-            <li>
-              <ul>
-                <li>이름: </li>
-                <li>가격: </li>
-                <li>날짜: </li>
-                <li>원/투룸: </li>
-                <li>월/전세: </li>
-              </ul>
-            </li>
+            <?php include "../../api/router/house/houseList.php" ?>
           </ul>
         </div>
 
