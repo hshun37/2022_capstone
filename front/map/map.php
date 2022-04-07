@@ -48,29 +48,38 @@
       <!-- 매물 데이터 -->
       <div class="building">
         <div class="map_side_02">
+
+          <!--매물 전체 데이터 버튼-->
           <span class="map_side_menu_02 all-room">
             <a href="javascript:allRoom_open();">전체</a>
           </span>
+
+          <!--원룸 데이터 버튼-->
           <span class="map_side_menu_02 one-room">
             <a href="javascript:oneRoom_open();">원룸</a>
           </span>
+
+          <!--투룸 데이터 버튼-->
           <span class="map_side_menu_02 two-room">
             <a href="javascript:twoRoom_open();">투룸</a>
           </span>
         </div>
 
+        <!--매물 전체 데이터-->
         <div class="loop-bilding all-room-detail" style="overflow-y:auto; overflow-x:hidden; width:100%; height:810px;">
           <ul>
             <?php include "../../api/router/house/houseList.php" ?>
           </ul>
         </div>
 
+        <!--원룸 데이터-->
         <div class="loop-bilding one-room-detail" style="overflow-y:auto; overflow-x:hidden; width:100%; height:810px;">
           <ul>
             원룸
           </ul>
         </div>
 
+        <!--투룸 데이터-->
         <div class="loop-bilding two-room-detail" style="overflow-y:auto; overflow-x:hidden; width:100%; height:810px;">
           <ul>
             투룸
