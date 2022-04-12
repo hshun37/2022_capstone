@@ -133,8 +133,8 @@ if (isset($_SESSION['id'])) {
                   </tr>
                 </thead>
                 <tbody>
-
-                  </tobdy>
+									<?php include("../../api/router/user/zzimList.php")?>
+                </tobdy>
               </table>
               <div class="paging">
                 <a href="#" class="bt">첫 페이지</a>

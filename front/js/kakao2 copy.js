@@ -1,21 +1,25 @@
-var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
-    mapOption = {
-        center: new kakao.maps.LatLng(35.909734775051504, 128.81796715333087), // 지도의 중심좌표
-        level: 3 // 지도의 확대 레벨
-    };
-var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
-
-// 마커가 표시될 위치입니다 
-var markerPosition = new kakao.maps.LatLng(35.909734775051504, 128.81796715333087);
-
-var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
 // 마커를 생성합니다
-var marker = new kakao.maps.Marker({
-    position: markerPosition
+fetch("http://isc963.dothome.co.kr/api/router/house/location_point copy.php" + window.location.search)
+.then((res) => res.json())
+.then((datas) => {
+	var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+		mapOption = {
+      center: new kakao.maps.LatLng(datas[0].x, datas[0].y), // 지도의 중심좌표
+      level: 5 // 지도의 확대 레벨
+    };
+
+	var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+	datas.map((data) => {
+		var marker = new kakao.maps.Marker({
+			position: new kakao.maps.LatLng(data.x, data.y),
+		})
+		marker.setMap(map);
+	})
 });
 
 // 마커가 지도 위에 표시되도록 설정합니다
-marker.setMap(map);
+// marker.setMap(map);
 // 일반 지도와 스카이뷰로 지도 타입을 전환할 수 있는 지도타입 컨트롤을 생성합니다
 var mapTypeControl = new kakao.maps.MapTypeControl();
 

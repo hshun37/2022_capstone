@@ -17,6 +17,9 @@
   <script defer src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
   <script defer src="../../front/js/map.js?fdsfdsfsdf"></script>
   <!-- <script defer src="../../front/js/map.js?hhh"></script> -->
+	<script>
+		alert(window.location.search)
+	</script>
 </head>
 
 <body>
@@ -30,10 +33,10 @@
         <!-- kakao Map 매물 검색 메뉴 -->
         <div class="map_search">
           <div class="search">
-            <form method="get" action="../../api/router/house/searchRoomList.php">
-              <input name="item" type="text" placeholder="검색어 입력" />
-              <button type="submit"><img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png" style="cursor: pointer"></a>
-            </form>
+						<form method="get" action="../../api//router/house/searchRoomList.php">
+							<input name="item" type="text" placeholder="검색어 입력"/>
+							<button type="submit"><img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png" style="cursor: pointer"></a>
+						</form>
           </div>
         </div>
 
@@ -68,7 +71,7 @@
         </div>
 
         <div class="loop-bilding one-room-detail" style="overflow-y:auto; overflow-x:hidden; width:100%; height:810px;">
-          <ul>
+				  <ul>
             <?php include "../../api/router/house/oneRoomList.php" ?>
           </ul>
         </div>
@@ -76,14 +79,6 @@
         <div class="loop-bilding two-room-detail" style="overflow-y:auto; overflow-x:hidden; width:100%; height:810px;">
           <ul>
             <?php include "../../api/router/house/twoRoomList.php" ?>
-            <li>
-              <ul>
-                <li>이름: <?php echo $row["COL 5"] ?> <?php echo $row["COL 11"] ?></li>
-                <li>가격: <?php echo $row["COL 9"] ?></li>
-                <li>원/투룸: <?php echo $row["COL 4"] ?></li>
-                <li>월/전세: <?php echo $row["COL 8"] ?></li>
-              </ul>
-            </li>
           </ul>
         </div>
 

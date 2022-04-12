@@ -1,5 +1,6 @@
 <?php
 session_start();
+include("../../api/router/bbs/viewBbs.php");
 ?>
 <!DOCTYPE html>
 <html lang="ko">
@@ -30,15 +31,15 @@ session_start();
         <strong>자유게시판</strong>
         <p>욕설, 비방, 인격모독 발언은 제제를 받을 수 있습니다.</p>
       </div>
-      <form class="board_write_wrap" method="POST">
+      <form class="board_write_wrap" method="POST" action="../../api/router/bbs/updateBbs.php?id=<?php echo $row['bbsId']?>">
         <div class="board_write">
           <div class="title">
             <dl>
               <dt>제목</dt>
-              <dd><input type="text" name="" id="" placeholder="제목 입력" value="글 제목이 들어갑니다"></dd>
+              <dd><input type="text" name="title" id="title" placeholder="제목 입력" value="<?php echo $row['title']?>"></dd>
             </dl>
           </div>
-          <div class="info">
+          <!--div class="info">
             <dl>
               <dt>글쓴이</dt>
               <dd><input type="text" name="" id="" placeholder="글쓴이 입력" value="디쿠"></dd>
@@ -47,14 +48,15 @@ session_start();
               <dt>비밀번호</dt>
               <dd><input type="password" name="" id="" placeholder="비밀번호 입력" value="1234"></dd>
             </dl>
-          </div>
+          </div -->
+					<hr/>
           <div class="cont">
-            <textarea placeholder="내용 입력">변경내용 추가 하세용~</textarea>
+            <textarea placeholder="내용 입력" name="description" id="description"><?php echo $row['description']?></textarea>
           </div>
         </div>
         <div class="bt_wrap">
           <button id="" type="submit" class="btn">수정</button>
-          <a href="../../front/view/view.php" class="btn">취소</a>
+          <a href="../../front/view/view.php?id=<?php echo $row['bbsId']?>" class="btn">취소</a>
         </div>
       </form>
     </div>

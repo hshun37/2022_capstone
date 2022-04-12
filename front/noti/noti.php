@@ -42,7 +42,7 @@ session_start();
         </thead>
         <tbody>
 				<?php
-        include("../../api/router/bbs/bbsList.php");
+        include("../../api/router/notice/noticeList.php");
 				?>
 				</tobdy>
       </table>
@@ -54,7 +54,9 @@ session_start();
         <a href="#" class="bt">마지막 페이지</a>
       </div>
       <div class="registration">
+				<?php if(isset($_SESSION['id']) && true){?>
         <a href="javascript:void(0);" class="btn btn--blue">글쓰기</a>
+				<?php } ?>
       </div>
     </div>
   </section>

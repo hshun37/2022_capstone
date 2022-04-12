@@ -15,7 +15,7 @@
 
 <body>
   <section class="login-form">
-    <h1><a href="../../front/index.php" class="logo">디쿠방</a></h1>
+    <h1><a href="../index.php" class="logo">디쿠방</a></h1>
     <form action="../../api/router/auth/signup.php" method="POST" class="right">
       <div class="int-area">
         <input type="text" name="id" id="id" autocomplete="off" required>
@@ -73,9 +73,6 @@
         <button id="btn" type="submit">회원가입</button>
       </div>
     </form>
-    <div class="caption">
-      <a href="../../front/login/login.php">로그인 하시겠습니까?</a>
-    </div>
   </section>
 
 </body>

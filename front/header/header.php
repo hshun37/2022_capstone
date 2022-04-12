@@ -78,7 +78,7 @@ if (isset($_SESSION['id'])) {
 				<?php } else { ?>
 					<div class="menu-text">
 						<span><a href="../../front/myPage/myPage.php" style="margin-right: 25px;">
-								<?php echo "$name" ?>님</a>
+							<?php echo "$name" ?>님</a>
 						</span>
 					</div>
 					<div>

@@ -1,5 +1,6 @@
 <?php
 session_start();
+include("../../api/router/bbs/viewBbs.php");
 ?>
 <!DOCTYPE html>
 <html lang="ko">
@@ -33,34 +34,38 @@ session_start();
       <div class="board_view_wrap">
         <div class="board_view">
           <div class="title">
-            제목 들어가는 칸
+            <?php echo $row['title'] ?>
           </div>
           <div class="info">
             <dl>
               <dt>번호</dt>
-              <dd>1</dd>
+              <dd><?php echo $row['bbsId'] ?></dd>
             </dl>
             <dl>
               <dt>글쓴이</dt>
-              <dd>디쿠</dd>
+              <dd><?php echo $row['id'] ?></dd>
             </dl>
             <dl>
               <dt>날짜</dt>
-              <dd>2022.03.31</dd>
+              <dd><?php echo $row['date'] ?></dd>
             </dl>
             <dl>
               <dt>조회</dt>
-              <dd>111</dd>
+              <dd><?php echo $row['view'] ?></dd>
             </dl>
           </div>
           <div class="cont">
-            내용 들어가는 칸<br>디쿠<br>디쿠<br>디쿠<br>디쿠<br>디쿠<br>디쿠<br>
-            디쿠<br>디쿠<br>디쿠
+					<?php echo $row['description'] ?>
           </div>
         </div>
         <div class="bt_wrap">
           <a href="../../front/board/board.php" class="btn">목록</a>
-          <a href="../../front/edit/edit.php" class="btn">수정</a>
+					<?php
+					if($_SESSION['id'] === $row['id']){
+					?> 
+          <a href="../../front/edit/edit.php?id=<?php echo $row['bbsId']?>" class="btn">수정</a>
+          <a href="../../api/router/bbs/deleteBbs.php?id=<?php echo $row['bbsId']?>" class="btn">삭제</a>
+					<?php } ?>
         </div>
       </div>
     </div>
