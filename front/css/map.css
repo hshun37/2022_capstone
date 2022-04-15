@@ -25,12 +25,18 @@
   width: 97.5%;
 }
 
-input {
+.search input {
   width: 100%;
   border: 1px solid #fff;
   border-radius: 8px;
   padding: 10px 12px;
   font-size: 14px;
+}
+
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 img {
@@ -85,7 +91,7 @@ img {
   margin: 0 5px 0 5px;
 }
 
-.loop-bilding>ul {
+/* .loop-bilding>ul {
   padding-left: 0;
 }
 
@@ -111,7 +117,36 @@ img {
 
 .loop-bilding>ul>li>ul>li:first-child {
   margin-top: 0;
+} */
+
+.loop-bilding>ul {
+  padding-left: 0;
 }
+
+.loop-bilding>ul>li {
+  background-color: gray;
+  margin-bottom: 20px;
+  list-style: none;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  padding: 10px 0;
+}
+
+.loop-bilding>ul>li>ul {
+  font-size: 14px;
+}
+
+.loop-bilding>ul>li>ul>form>li {
+  font-size: 20px;
+  display: flex;
+  margin-top: 20px;
+}
+
+.loop-bilding>ul>li>ul>form>li:first-child {
+  margin-top: 0;
+}
+
 
 /* 짝수, 홀수 색상 구분하기 위해 */
 .loop-bilding>ul>li:nth-child(2n) {

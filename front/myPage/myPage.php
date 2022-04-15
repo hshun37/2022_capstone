@@ -118,14 +118,18 @@ if (isset($_SESSION['id'])) {
         <!-- 정보 수정 -->
 
         <!--즐겨찾기-->
+        
         <div class="inquiry-detail">
+        <div style="float:left; margin-left: 50px; margin-top: 5px;">
+          <a href="#" class="btn">그래프 보기</a>
+        </div>
           <div class="inquiry-info">
 
             <div class="board_list_wrap">
               <table class="board_list">
                 <thead>
                   <tr>
-                    <th>날짜</th>
+                    <th></th>
                     <th>이름</th>
                     <th>가격</th>
                     <th>원/투룸</th>
@@ -158,15 +162,15 @@ if (isset($_SESSION['id'])) {
             </div>
           </div>
           <!--즐겨찾기-->
-
+          
 
         </div>
       </div>
   </section>
   <!--내정보 끝-->
-
+  
   <?php include "../../front/footer/footer.php" ?>
-
+  
 </body>
 
 </html>

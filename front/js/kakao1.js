@@ -85,27 +85,45 @@
 
 // 마커를 생성합니다
 
-var data_x =Array();
-var data_y=Array();
-var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
-mapOption = {
-        center: new kakao.maps.LatLng(35.8396648, 128.5737281), // 지도의 중심좌표
-        level: 5 // 지도의 확대 레벨
-    };
-
-var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
-
-// 마커를 생성합니다
-fetch("http://isc963.dothome.co.kr/api/router/house/markingMap.php")
+var data_php = new Array([],[]);
+fetch("http://isc963.dothome.co.kr/api/router/house/testmovemap.php" + window.location.search)
 .then((res) => res.json())
 .then((datas) => {
+    
+	var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+		mapOption = {
+      center: new kakao.maps.LatLng(datas[0].x, datas[0].y), // 지도의 중심좌표
+      level: 5 // 지도의 확대 레벨
+    };
+
+	var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
 	datas.map((data) => {
 		var marker = new kakao.maps.Marker({
 			position: new kakao.maps.LatLng(data.x, data.y),
 		})
 		marker.setMap(map);
 	})
+    console.log(data_php)
 });
+
+var write_tag="";
+for (var i = 0; i < data_php.length; i++) {
+    write_tag =+ "<li id ="+data_php[i].name+", onclick='clickreader(this.id)'>" +
+    "<ul>"+
+      "<li>이름: "+data_php[i].name+data_php[i].detail_locate+"</li>" +
+      "<li>가격: "+data_php[i].price+"</li>"+
+      "<li>원/투룸: "+data_php[i].type+"</li>"+
+      "<li>월/전세: "+data_php[i].type+"</li>"+
+      "</ul>"+
+    "</li>";
+    
+}
+
+var writeplus_tag = document.getElementById('innertag');
+writeplus_tag.innerHTML=write_tag;
+
+
 
 // 마커가 지도 위에 표시되도록 설정합니다
 // marker.setMap(map);
@@ -121,11 +139,14 @@ var zoomControl = new kakao.maps.ZoomControl();
 map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
 
 function clickreader(id){
-    for(i=0; data_x[i]<=data_x.length; i++){
-        if(id==data_x[i]){
-            var moveLatLon = new kakao.maps.LatLng(data_x[i], data_y[i]);
+    for(i=0; i<data_php.length; i++){
+        if(id==data_php[i]){
+            var moveLatLon = new kakao.maps.LatLng(data_php[i], data_php[i]);
         }
 
     }
   
 }
+
+
+
