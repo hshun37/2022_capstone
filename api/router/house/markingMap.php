@@ -1,7 +1,19 @@
 <?php
 session_start();
 include("../../db.php");
-$concat="SELECT CONCAT (`COL 12`,`COL 13`) 'names' FROM house";
+
+if(isset($_GET['items'])){
+    //옆 리스트 클릭시
+    $items = $_GET['items'];
+	$concat="SELECT CONCAT (`COL 12`,`COL 13`) 'names' 
+    FROM house 
+    ORDER BY FIELD(`COL 5`, '$items')desc, houseId desc";
+
+}
+else{
+    $concat="SELECT CONCAT (`COL 12`,`COL 13`) 'names' FROM house";
+}
+
 $c_order= mysqli_query($db,$concat);
 $sql = "SELECT * FROM location";
 $order = mysqli_query($db, $sql);

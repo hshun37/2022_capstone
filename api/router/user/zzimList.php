@@ -8,7 +8,7 @@ if(isset($_SESSION["id"])){
 	for(;$row = mysqli_fetch_array($order, MYSQLI_ASSOC);) {
 ?>
 	<tr>
-		<td></td>
+		<td><input type="checkbox" id="checkbox"></td>
 		<td><?php echo $row["COL 5"] . " " . $row["COL 11"]?></td>
 		<td><?php echo $row["COL 9"] ?></td>
 		<td><?php echo $row["COL 4"] ?></td>

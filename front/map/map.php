@@ -9,7 +9,7 @@
   <link rel="stylesheet" rel="icon" href="/favicon.ico">
   <link rel="stylesheet" href="../../front/css/btn.css?gg">
   <link rel="stylesheet" href="../../front/css/main.css?aa">
-  <link rel="stylesheet" href="../../front/css/map.css?gggegege">
+  <link rel="stylesheet" href="../../front/css/map.css?fdffdfdfdf">
   <link rel="stylesheet" href="../../front/css/switch.css?fdsfsdf">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -17,6 +17,8 @@
   <script defer src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
   <script defer src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
   <script defer src="../../front/js/map.js?fdsfdsfsdf"></script>
+  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=605db5303d35869f7dea1bc7ebc32ea0"></script>
+  <script src="../../front/js/kakao2 copy.js"></script>
   <!-- <script defer src="../../front/js/map.js?hhh"></script> -->
 </head>
 
@@ -42,8 +44,8 @@
         <div class="kakao_api">
           <div class="kakao">
             <div class="kakaoMap_size" id="map"></div>
-            <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=605db5303d35869f7dea1bc7ebc32ea0"></script>
-            <script src="../../front/js/kakao2 copy.js"></script>
+
+            
           </div>
         </div>
       </div>
@@ -64,7 +66,8 @@
 
         <div class="loop-bilding all-room-detail" style="overflow-y:auto; overflow-x:hidden; width:100%; height:810px;">
           <ul>
-            <?php include "../../api/router/house/houseList.php" ?>
+    
+          <?php include "../../api/router/house/houseList.php" ?>
             <!-- <li>
               <ul>
                 <li>이름: <?php echo $row["COL 5"] ?> <?php echo $row["COL 11"] ?></li>

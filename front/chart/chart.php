@@ -13,9 +13,17 @@
 
 <body>
   <?php include "../../front/header/header.php" ?>
-
-  <div id="barChart"></div>
-
+  <div style="margin-top: 60px;">
+    <div style="margin-bottom:40px;">
+      <h1><span style="font-size:20pt; 
+      display:flex; 
+      justify-content:center; 
+      align-items:center; ">Graph</span></h1>
+    </div>
+      <div id="barChart"></div>
+    </div>
+  </div>
+  <?php include "../../front/footer/footer.php" ?>
 </body>
 
 </html>

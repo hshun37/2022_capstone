@@ -15,6 +15,7 @@ include("../../db.php");
         while($c_row= mysqli_fetch_array($c_order)){
              if($c_row['names']==$row['name']){
                  array_push($locate,[
+                     
                     'x' => $row['location_x'], 
                     'y' => $row['location_y']
                     
