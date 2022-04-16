@@ -118,11 +118,11 @@ if (isset($_SESSION['id'])) {
         <!-- 정보 수정 -->
 
         <!--즐겨찾기-->
-        
+
         <div class="inquiry-detail">
-        <div style="float:left; margin-left: 50px; margin-top: 5px;">
-          <a href="#" class="btn">그래프 보기</a>
-        </div>
+          <div style="float:left; margin-left: 50px; margin-top: 5px;">
+            <a href="../../front/chart/chart.php" class="btn">그래프 보기</a>
+          </div>
           <div class="inquiry-info">
 
             <div class="board_list_wrap">
@@ -137,8 +137,8 @@ if (isset($_SESSION['id'])) {
                   </tr>
                 </thead>
                 <tbody>
-									<?php include("../../api/router/user/zzimList.php")?>
-                </tobdy>
+                  <?php include("../../api/router/user/zzimList.php") ?>
+                  </tobdy>
               </table>
               <div class="paging">
                 <a href="#" class="bt">첫 페이지</a>
@@ -162,15 +162,15 @@ if (isset($_SESSION['id'])) {
             </div>
           </div>
           <!--즐겨찾기-->
-          
+
 
         </div>
       </div>
   </section>
   <!--내정보 끝-->
-  
+
   <?php include "../../front/footer/footer.php" ?>
-  
+
 </body>
 
 </html>
