@@ -1,4 +1,4 @@
-var chart = bb.generate({
+var chart2 = bb.generate({
   data: {
     columns: [
 			/*
@@ -14,14 +14,14 @@ var chart = bb.generate({
       ratio: 0.5
     }
   },
-  bindto: "#barChart"
+  bindto: "#barChart2"
 });
 
-fetch("http://isc963.dothome.co.kr/api/router/user/visualizationMonth.php")
+fetch("http://isc963.dothome.co.kr/api/router/user/visualizationYear.php")
 .then((res) => res.json())
 .then((datas) => {
 	datas.map((data) => {
-		chart.load({
+		chart2.load({
 			columns: [
 				[data.name, data.price]
 			]

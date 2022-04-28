@@ -8,7 +8,9 @@
   <title>디쿠방</title>
   <link rel="stylesheet" href="https://naver.github.io/billboard.js/release/latest/dist/theme/datalab.min.css">
   <script src="https://naver.github.io/billboard.js/release/latest/dist/billboard.pkgd.min.js"></script>
-  <script defer src="../../front/js/chart.js?dfdffd"></script>
+  <script defer src="../../front/js/chart.js?afeter4"></script>
+  <script defer src="../../front/js/chart1.js?after4"></script>
+  <script defer src="../../front/js/chart2.js?after4"></script>
 </head>
 
 <body>
@@ -20,10 +22,12 @@
       justify-content:center; 
       align-items:center; ">Graph</span></h1>
     </div>
-      <div id="barChart"></div>
+      <div style="float:left; width:33%;"><div id="barChart"></div></div>
+      <div style="float:left; width:33%;"><div id="barChart1"></div></div>
+      <div style="float:left; width:33%;"><div id="barChart2"></div></div>
+      <div style="clear:both;"></div>
     </div>
   </div>
   <?php include "../../front/footer/footer.php" ?>
 </body>
-
 </html>

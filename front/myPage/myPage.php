@@ -127,16 +127,16 @@ if (isset($_SESSION['id'])) {
               <table class="board_list">
                 <thead>
                   <tr>
-                    <th><button>Check All</button></th>
                     <th>이름</th>
                     <th>가격</th>
                     <th>원/투룸</th>
                     <th>월/전세</th>
+                    <th>삭제하기</th>
                   </tr>
                 </thead>
                 <tbody>
                   <?php include("../../api/router/user/zzimList.php") ?>
-                  </tobdy>
+                </tobdy>
               </table>
               <div class="paging">
                 <a href="#" class="bt">첫 페이지</a>

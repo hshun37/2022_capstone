@@ -49,6 +49,7 @@ else {
 $c_order= mysqli_query($db,$concat);
 if(isset($_GET['items'])){
     $items = $_GET['items'];
+    #옆 리스트 클릭시 배열 정렬
     $sql = "SELECT location.name,location.location_x,location.location_y,house.`COL 5`,houseId
            FROM location,house 
            where location.name        
