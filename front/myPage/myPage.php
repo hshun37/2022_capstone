@@ -53,11 +53,8 @@ if (isset($_SESSION['id'])) {
         <div class="size-1 info">
           <a href="javascript:info_open();" class="page-menu-color">내 정보</a>
         </div>
-        <div class="size-1 correction">
-          <a href="javascript:correction_open();" class="page-menu-color">정보 수정</a>
-        </div>
         <div class="size-1 inquiry">
-          <a href="javascript:inquiry_open();" class="page-menu-color">즐겨찾기</a>
+          <a href="zzim.php" class="page-menu-color">즐겨찾기</a>
         </div>
       </div>
       <!-- 메인페이지 버튼 -->
@@ -82,10 +79,13 @@ if (isset($_SESSION['id'])) {
               </div>
             </div>
           </div>
+          <div style="display:inline; float:right; margin-top:120px; margin-right:10px;">
+            <a href="javascript:correction_open();" class="btn">내정보 수정</a>
+          </div>
         </div>
         <!-- 내 정보 -->
 
-        <!-- 정보 수정 -->
+       <!-- 정보 수정 -->
         <div class="correction-detail">
           <div class="info-correction correction-size">
             <form action="../../api/router/user/userupdate.php" method="POST" class="correction-form">
@@ -123,43 +123,7 @@ if (isset($_SESSION['id'])) {
           
           <div class="inquiry-info">
 
-            <div class="board_list_wrap">
-              <table class="board_list">
-                <thead>
-                  <tr>
-                    <th>이름</th>
-                    <th>가격</th>
-                    <th>원/투룸</th>
-                    <th>월/전세</th>
-                    <th>삭제하기</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <?php include("../../api/router/user/zzimList.php") ?>
-                </tobdy>
-              </table>
-              <div class="paging">
-                <a href="#" class="bt">첫 페이지</a>
-                <a href="#" class="bt">이전 페이지</a>
-                <a href="#" class="num on">1</a>
-                <a href="#" class="bt">다음 페이지</a>
-                <a href="#" class="bt">마지막 페이지</a>
-              </div>
-              <div style="margin-left:410px; margin-right:430px; margin-top: 5px;">
-               <a href="../../front/chart/chart.php" class="btn">그래프 보기</a>
-              </div>
-              <!-- <div class="inquiry-box">
-              <ul class="inquiry-size">
-                <li><span class="building-size-1">이름</span></li>
-                <li><span class="building-size-1">가격</span></li>
-                <li><span class="building-size-1">날짜</span></li>
-                <li><span class="building-size-1">원/투룸</span></li>
-                <li><span class="building-size-1">월/전세</span></li>
-                <button class="button-delete">삭제</button>
-              </ul>
-            </div> -->
-
-            </div>
+          
           </div>
           <!--즐겨찾기-->
 

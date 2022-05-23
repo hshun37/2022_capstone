@@ -2,7 +2,7 @@
 	//map 만들기
 	const mapContainer = document.getElementById("map"), // 지도를 표시할 div
 	mapOption = {
-		center: new kakao.maps.LatLng(35.909734775051504, 128.81796715333087), // 지도의 중심좌표
+		center: new kakao.maps.LatLng(db[0][0].x, db[0][0].y), // 지도의 중심좌표
 		level: 5, // 지도의 확대 레벨
 		mapTypeId: kakao.maps.MapTypeId.ROADMAP, // 지도종류
 	};
@@ -70,13 +70,14 @@
 		};
 	};
 
-	const base_url = "http://isc963.dothome.co.kr/api/router/house/location_point.php";
-  const getData = async () => {
-    const res = await fetch(base_url);
-    return res.text();
-  };
-
 	const init = async () => {
+    // 서버 통신
+    const base_url = "http://isc963.dothome.co.kr/api/router/house/location_point copy.php" + window.location.search;
+    const getData = async () => {
+      const res = await fetch(base_url);
+      return res.text();
+    };
+
 		//마커 저장배열
 		const markers = new Array();
     const db = JSON.parse(await getData());
@@ -84,7 +85,6 @@
 		//데이터 확인
 		const test = new Array();
 		test.push(db);
-		//console.log(test);
 
 		if (navigator.geolocation) {
       geolocationT();
@@ -96,10 +96,10 @@
     }
 
 		db.map((data) => {
-            var moveLatLon = new kakao.maps.LatLng(data[0].x, data[0].y);
-    
-            // 지도 중심을 이동 시킵니다
-            map.setCenter(moveLatLon);
+      // 맵 중앙 이동 - 오류 있음
+      //map.setCenter(
+      //  new kakao.maps.LatLng(db[0][0].x, db[0][0].y)
+      //)
 			//지도에 마커를 생성하고 표시한다.
 			const marker = new kakao.maps.Marker({
 				//position: new kakao.maps.LatLng(positions[0], positions[1]),
@@ -132,23 +132,21 @@
 			markers.push(marker);
 		});
 		clusterer.addMarkers(markers);
-
-        kakao.maps.event.addListener(clusterer, 'clusterclick', function(cluster) {
-
-            // 지도의 현재 영역을 얻어옵니다 
-             var bounds = map.getBounds();
+    /*
+    kakao.maps.event.addListener(clusterer, 'clusterclick', function(cluster) {
+      // 지도의 현재 영역을 얻어옵니다 
+      var bounds = map.getBounds();
     
-            // 영역의 남서쪽 좌표를 얻어옵니다 
-             var swLatLng = bounds.getSouthWest(); 
-             const swstr=swLatLng.split(",");
-             const swstr1=swstr[0].substr(1)
+      // 영역의 남서쪽 좌표를 얻어옵니다 
+      var swLatLng = bounds.getSouthWest(); 
+      const swstr=swLatLng.split(",");
+      const swstr1=swstr[0].substr(1)
     
-            // 영역의 북동쪽 좌표를 얻어옵니다 
-             var neLatLng = bounds.getNorthEast();
-            location.replace('http://isc963.dothome.co.kr/front/map/map.php?locate='+swstr1)
-
-
-        });
+      // 영역의 북동쪽 좌표를 얻어옵니다 
+      var neLatLng = bounds.getNorthEast();
+      location.replace('http://isc963.dothome.co.kr/front/map/map.php?locate='+swstr1)
+    });
+    */
 	};
 	init();
 })();

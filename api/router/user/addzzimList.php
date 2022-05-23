@@ -9,10 +9,10 @@ if(isset($_SESSION["id"])){
         $houseId = mysqli_real_escape_string($db,$_GET["houseId"]);
 
         #중복 처리
-        if(checkhouseId('zzimList','houseId',$houseId)){
+        if(checkhouseId('zzimList','houseId',$houseId,$id)){
             $save = "INSERT INTO `zzimList`(`id`, `houseId`) VALUES ('$id','$houseId')";
             $result = mysqli_query($db, $save);
-            echo "<script>  history.back(); </script>";
+            echo "<script> alert('찜 목록으로 이동했습니다.'); history.back(); </script>";
 
         }
         else{
@@ -41,9 +41,9 @@ else{
 
 
 <?php
-    function checkhouseId($tableName,$col,$h_Id){
+    function checkhouseId($tableName,$col,$h_Id,$id){
         include("../../db.php");
-        $check = "SELECT * FROM `$tableName` WHERE `$col` = '$h_Id';";
+        $check = "SELECT * FROM `$tableName` WHERE `$col` = '$h_Id' and `id` = '$id';";
         $row = mysqli_query($db, $check);
 
         if(mysqli_num_rows($row) == 0){

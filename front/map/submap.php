@@ -9,16 +9,19 @@
   <link rel="stylesheet" rel="icon" href="/favicon.ico">
   <link rel="stylesheet" href="../../front/css/btn.css?gg">
   <link rel="stylesheet" href="../../front/css/main.css?aa">
-  <link rel="stylesheet" href="../../front/css/map.css?fdfdf">
+  <link rel="stylesheet" href="../../front/css/map.css?eeeeee">
   <link rel="stylesheet" href="../../front/css/switch.css?fdsfsdf">
   <link rel="stylesheet" href="../../front/css/menuBar.css">
+  <link rel="stylesheet" href="../../front/css/mapSub.css">
+  <link rel="stylesheet" href="../../front/css/submap.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
   <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
   <script defer src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
   <script defer src="../../front/js/map.js?fdsfdsfsdf"></script>
-  
+
   <!-- <script defer src="../../front/js/map.js?hhh"></script> -->
 </head>
 
@@ -74,61 +77,35 @@
 
       <!-- 매물 데이터 -->
       <div class="building">
-        <div class="map_side_02">
+        <div class="map_side_sub_02">
           <span class="map_side_menu_02 all-room">
-            <a href="javascript:allRoom_open();">전체</a>
+            <a href="../../front/map/map.php">
+              <span class="material-symbols-outlined">&nbsp;arrow_back</span>
+            </a>
           </span>
           <span class="map_side_menu_02 one-room">
-            <a href="javascript:oneRoom_open();">원룸</a>
-          </span>
-          <span class="map_side_menu_02 two-room">
-            <a href="javascript:twoRoom_open();">투룸</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;이름
           </span>
         </div>
 
         <div class="loop-bilding all-room-detail" style="overflow-y:auto; overflow-x:hidden; width:100%; height:810px;">
-          <ul>
-
-            <?php include "../../api/router/house/houseList.php" ?>
-            <!-- <li>
-              <ul>
-                <li>이름: <?php //echo $row["COL 5"] 
-                        ?> <?php //echo $row["COL 11"] 
-                            ?></li>
-                <li>가격: <?php //echo $row["COL 9"] 
-                        ?></li>
-                <li>원/투룸: <?php //echo $row["COL 4"] 
-                          ?></li>
-                <li>월/전세: <?php //echo $row["COL 8"] 
-                          ?></li>
-                <li>
-                  <form action="" method="POST">
-                    <div>
-                      <input type="checkbox" name="" value="" checked id="switch">
-                      <label for="switch" class="switch_label">
-                        <span class="onf_btn"></span>
-                      </label>
-                    </div>
-                  </form>
-                </li>
-              </ul>
-            </li> -->
-          </ul>
+          <div>
+            <div class="sale">
+            </div>
+            <div class="monthly">
+              &nbsp;&nbsp;&nbsp;월세&nbsp;&nbsp;&nbsp;xxx/xxx
+            </div>
+          </div>
+          <div class="line"></div>
+          <div>
+            <div class="review">
+              &nbsp;&nbsp;&nbsp;리뷰
+            </div>
+          </div>
         </div>
-
-        <div class="loop-bilding one-room-detail" style="overflow-y:auto; overflow-x:hidden; width:100%; height:810px;">
-          <ul>
-            <?php include "../../api/router/house/oneRoomList.php" ?>
-          </ul>
-        </div>
-
-        <div class="loop-bilding two-room-detail" style="overflow-y:auto; overflow-x:hidden; width:100%; height:810px;">
-          <ul>
-            <?php include "../../api/router/house/twoRoomList.php" ?>
-          </ul>
-        </div>
-
       </div>
+
+    </div>
 
     </div>
   </section>

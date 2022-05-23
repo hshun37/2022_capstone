@@ -1,0 +1,36 @@
+*{padding:0;margin:0}
+li{list-style:none}
+a{text-decoration:none;font-size:14px}
+.menuBar > li {
+  text-align: center;
+  line-height: 40px;
+  /* background-color: #5778ff; */
+  background-color: #fff;
+}
+
+.menuBar a {
+  /* color: #fff; */
+}
+.submenu > li {
+  line-height: 50px;
+  /* background-color: #5778ff; */
+  background-color: #fff;
+}
+
+.submenu {
+  height: 0; /*ul의 높이를 안보이게 처리*/
+  overflow: hidden;
+  position: fixed;
+  width: 60px;
+  z-index: 999;
+}
+.menuBar > li:hover {
+  /* background-color: #5778ff; */
+  background-color: #fff;
+  transition-duration: 0.5s;
+}
+
+.menuBar > li:hover .submenu {
+  height: 250px; /*서브메뉴 li한개의 높이 50*5*/
+  transition-duration: 1s;
+}

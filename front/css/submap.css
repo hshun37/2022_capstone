@@ -1,0 +1,23 @@
+.line {
+  width: 100%;
+  height: 5px;
+  background-color: rgb(238, 238, 238);
+}
+
+.sale {
+  width: 100%;
+  height: 230px;
+  background-color: beige;
+  background-image: url(../../front/img/이미지없음.jpg);
+}
+
+.monthly {
+  margin: 20px 0px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.review {
+  margin: 20px 0;
+  font-size: 20px;
+}

@@ -69,7 +69,8 @@ while($row= mysqli_fetch_array($order)) {
 		if($c_row['names']==$row['name']){
       array_push($locate, [
 				'x' => $row['location_x'], 
-                'y' => $row['location_y']
+                'y' => $row['location_y'],
+                'id' => $c_row['COL 5']
 				]
 			);
 		}

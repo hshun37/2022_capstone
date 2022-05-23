@@ -141,7 +141,7 @@ section {
 
 /* 카카오 API */
 .kakao-api {
-  height: 800px;
+  margin-top: 120px;
   margin-bottom: 200px;
 }
 .dcu-room-ment {
@@ -185,7 +185,7 @@ section {
   font-weight: 400;
 }
 .board-ment > h1 > p {
-  font-size: 55px;
+  font-size: 44px;
   font-weight: bold;
 }
 

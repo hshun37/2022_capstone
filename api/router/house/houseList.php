@@ -15,22 +15,16 @@ if (isset($_GET['item'])) {
 	`COL 8` like '%$item%' or
 	`COL 12` like '%$item%'
 	order by houseId desc";
-} 
-
-else if(isset($_GET['items'])){
-    //옆 리스트 클릭시
-    $items = $_GET['items'];
+} else if (isset($_GET['items'])) {
+	//옆 리스트 클릭시
+	$items = $_GET['items'];
 	$sql = "SELECT * 
 	FROM `house` 
 	ORDER BY FIELD(`COL 5`, '$items')desc, houseId asc";
-
-}
-
-
-else {
+} else {
 	# 기본
 	// $sql = "SELECT * FROM `house` order by houseId desc";
-        $sql = "SELECT *
+	$sql = "SELECT *
                 FROM house,location
                 where location.name IN(concat(`COL 12`,`COL 13`))
                 order by houseId desc";
@@ -39,9 +33,9 @@ $order = mysqli_query($db, $sql);
 for (; $row = mysqli_fetch_array($order, MYSQLI_ASSOC);) {
 ?>
 	<li>
-        <ul onclick="location.href='http://isc963.dothome.co.kr/front/map/map.php?items=<?php echo $row['COL 5']?>'">
+		<ul onclick="location.href='http://isc963.dothome.co.kr/front/map/map.php?items=<?php echo $row['COL 5'] ?>'">
 
-			<form action="../../api/router/user/addzzimList.php?houseId=<?php echo $row['houseId']?>" method="POST">
+			<form action="../../api/router/user/addzzimList.php?houseId=<?php echo $row['houseId'] ?>" method="POST">
 				<li>이름: <?php echo $row["COL 5"] ?> <?php echo $row["COL 11"] ?></li>
 				<li>가격: <?php echo $row["COL 9"] ?></li>
 				<li>원/투룸: <?php echo $row["COL 4"] ?></li>
