@@ -44,18 +44,18 @@ if (isset($_SESSION['id'])) {
 						지도
 					</a>
 				</div>
-				<div class="menu-text">
+				<!-- <div class="menu-text">
 					<a href="javascript:void(0)">
-						<!-- <span class="material-icons">home</span> -->
+						<span class="material-icons">home</span>
 						원룸
 					</a>
 				</div>
 				<div class="menu-text">
 					<a href="javascript:void(0)">
-						<!-- <span class="material-icons">maps_home_work</span> -->
+						<span class="material-icons">maps_home_work</span>
 						투룸
 					</a>
-				</div>
+				</div> -->
 				<div class="menu-text">
 					<a href="../../front/board/board.php">
 						<!-- <span class="material-icons">assignment</span> -->
@@ -78,7 +78,7 @@ if (isset($_SESSION['id'])) {
 				<?php } else { ?>
 					<div class="menu-text">
 						<span><a href="../../front/myPage/myPage.php" style="margin-right: 25px;">
-							<?php echo "$name" ?>님</a>
+								<?php echo "$name" ?>님</a>
 						</span>
 					</div>
 					<div>

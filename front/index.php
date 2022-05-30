@@ -58,18 +58,18 @@ if (isset($_SESSION['id'])) {
 						지도
 					</a>
 				</div>
-				<div class="menu-text">
+				<!-- <div class="menu-text">
 					<a href="javascript:void(0)">
-						<!-- <span class="material-icons">home</span> -->
+						<span class="material-icons">home</span>
 						원룸
 					</a>
 				</div>
 				<div class="menu-text">
 					<a href="javascript:void(0)">
-						<!-- <span class="material-icons">maps_home_work</span> -->
+						<span class="material-icons">maps_home_work</span>
 						투룸
 					</a>
-				</div>
+				</div> -->
 				<div class="menu-text">
 					<a href="../../front/board/board.php">
 						<!-- <span class="material-icons">assignment</span> -->
@@ -135,7 +135,7 @@ if (isset($_SESSION['id'])) {
 <section class="scroll-spy kakao-api">
 	<div class="dcu-room-ment">
 		<h1 class=" back-to-position to-left delay-1">
-			<p>디쿠방</p>에서 원하는&nbsp;<p>방</p>을 찾으세요.
+			<p>디쿠방</p>에서 원하는&nbsp;<p>방</p>을 비교하세요.
 		</h1>
 	</div>
 	<div class="kakao">

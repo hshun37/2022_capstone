@@ -1,6 +1,3 @@
-<?php
-include("../../api/router/house/viewHouse.php");
-?>
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -12,21 +9,16 @@ include("../../api/router/house/viewHouse.php");
   <link rel="stylesheet" rel="icon" href="/favicon.ico">
   <link rel="stylesheet" href="../../front/css/btn.css?gg">
   <link rel="stylesheet" href="../../front/css/main.css?aa">
-  <link rel="stylesheet" href="../../front/css/map.css?epppvlhh">
+  <link rel="stylesheet" href="../../front/css/map.css?fdfdf">
   <link rel="stylesheet" href="../../front/css/switch.css?fdsfsdf">
   <link rel="stylesheet" href="../../front/css/menuBar.css">
-  <link rel="stylesheet" href="../../front/css/mapSub.css">
-  <link rel="stylesheet" href="../../front/css/submap.css">
-  <link rel="stylesheet" href="../../front/css/comment.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
   <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="../../front/js/comment.js?gppphge"></script>
   <script defer src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
   <script defer src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
   <script defer src="../../front/js/map.js?fdsfdsfsdf"></script>
-
+  
   <!-- <script defer src="../../front/js/map.js?hhh"></script> -->
 </head>
 
@@ -75,91 +67,68 @@ include("../../api/router/house/viewHouse.php");
           <div class="kakao">
             <div class="kakaoMap_size" id="map"></div>
             <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=605db5303d35869f7dea1bc7ebc32ea0&libraries=clusterer"></script>
-            <script src="../../front/js/kakao3.js"></script>
+            <script src="../../front/js/kakaotest.js"></script>
           </div>
         </div>
       </div>
 
-      <!-- 상세 페이지 -->
-      <div class="building review-detail">
-        <div class="map_side_sub_02">
+      <!-- 매물 데이터 -->
+      <div class="building">
+        <div class="map_side_02">
           <span class="map_side_menu_02 all-room">
-            <a href="#" onclick="history.back();">
-              <span class="material-symbols-outlined">&nbsp;arrow_back</span>
-            </a>
+            <a href="javascript:allRoom_open();">전체</a>
           </span>
           <span class="map_side_menu_02 one-room">
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $row["COL 5"] ?> <?php echo $row["COL 11"] ?>
+            <a href="javascript:oneRoom_open();">원룸</a>
+          </span>
+          <span class="map_side_menu_02 two-room">
+            <a href="javascript:twoRoom_open();">투룸</a>
           </span>
         </div>
 
         <div class="loop-bilding all-room-detail" style="overflow-y:auto; overflow-x:hidden; width:100%; height:810px;">
-          <div>
-            <div class="sale">
-            </div>
-            <div class="monthly">
-              &nbsp;&nbsp;&nbsp;<?php echo $row["COL 8"] ?>&nbsp;&nbsp;&nbsp;<?php echo $row["COL 9"] ?>
-            </div>
-          </div>
-          <div class="line"></div>
+          <ul>
 
-          <div>
-            <div class="review">
-              &nbsp;&nbsp;&nbsp;리뷰
-            </div>
-            <div class="write-review">
-              <a href="javascript:write_open();">리뷰 쓰기</a>
-            </div>
-          </div>
+            <?php include "../../api/router/house/houseList.php" ?>
+            <!-- <li>
+              <ul>
+                <li>이름: <?php //echo $row["COL 5"] 
+                        ?> <?php //echo $row["COL 11"] 
+                            ?></li>
+                <li>가격: <?php //echo $row["COL 9"] 
+                        ?></li>
+                <li>원/투룸: <?php //echo $row["COL 4"] 
+                          ?></li>
+                <li>월/전세: <?php //echo $row["COL 8"] 
+                          ?></li>
+                <li>
+                  <form action="" method="POST">
+                    <div>
+                      <input type="checkbox" name="" value="" checked id="switch">
+                      <label for="switch" class="switch_label">
+                        <span class="onf_btn"></span>
+                      </label>
+                    </div>
+                  </form>
+                </li>
+              </ul>
+            </li> -->
+          </ul>
         </div>
-      </div>
 
-      <!-- 리뷰 쓰기 페이지 -->
-      <div class="building write-detail">
-        <div class="map_side_sub_02">
-          <span class="map_side_menu_02 all-room">
-            <div class="back-review">
-              <a class="material-symbols-outlined" href="javascript:review_open();">&nbsp;arrow_back</a>
-            </div>
-          </span>
-          <span class="map_side_menu_02 one-room">
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $row["COL 5"] ?> <?php echo $row["COL 11"] ?>
-          </span>
+        <div class="loop-bilding one-room-detail" style="overflow-y:auto; overflow-x:hidden; width:100%; height:810px;">
+          <ul>
+            <?php include "../../api/router/house/oneRoomList.php" ?>
+          </ul>
         </div>
-        <div class="loop-bilding all-room-detail" style="overflow-y:auto; overflow-x:hidden; width:100%; height:810px;">
-          <form class="board_write_wrap" method="POST" action="../../api/router/bbs/writeBbs.php">
-            <div class="board_write">
-              <div class="title">
-                <dl>
-                  <dt>제목</dt>
-                  <dd><input type="text" name="title" id="title" placeholder="제목 입력"></dd>
-                </dl>
-              </div>
-              <hr />
-              <!--div class="info">
-            <dl>
-              <dt>글쓴이</dt>
-              <dd><input type="text" name="" id="" placeholder="글쓴이 입력"></dd>
-            </dl>
-            <dl>
-              <dt>비밀번호</dt>
-              <dd><input type="password" name="" id="" placeholder="비밀번호 입력"></dd>
-            </dl>
-          </div -->
-              <div class="cont">
-                <textarea placeholder="내용 입력" name="description" id="description"></textarea>
-              </div>
-            </div>
-            <div class="bt_wrap">
-              <button id="" type="submit" class="btn">등록</button>
-              <a href="../../front/board/board.php" class="btn">취소</a>
-            </div>
-          </form>
+
+        <div class="loop-bilding two-room-detail" style="overflow-y:auto; overflow-x:hidden; width:100%; height:810px;">
+          <ul>
+            <?php include "../../api/router/house/twoRoomList.php" ?>
+          </ul>
         </div>
 
       </div>
-
-    </div>
 
     </div>
   </section>

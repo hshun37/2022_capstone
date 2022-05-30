@@ -36,6 +36,11 @@ else if(isset($_GET['items'])){
 
 }
 
+else if(isset($_GET['houseId'])){
+	$houseId = $_GET['houseId'];
+	$concat = "SELECT *, CONCAT (`COL 12`,`COL 13`) 'names' FROM `house` WHERE `houseId` = '$houseId'";
+}
+
 else { 
 	# 기본
 	$concat = "SELECT *, CONCAT (`COL 12`,`COL 13`) 'names' FROM `house`
@@ -46,6 +51,8 @@ else {
     //             where location.name IN(concat(`COL 12`,`COL 13`))
     //             order by houseId desc";
 }
+
+
 $c_order= mysqli_query($db,$concat);
 if(isset($_GET['items'])){
     $items = $_GET['items'];

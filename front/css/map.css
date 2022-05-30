@@ -153,3 +153,11 @@ img {
 .loop > div {
   margin: 20px 0;
 }
+
+.review-detail {
+  display: block;
+}
+
+.write-detail {
+  display: none;
+}

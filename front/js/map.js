@@ -3,7 +3,7 @@ const oneRoom = document.querySelector('.one-room');
 const twoRoom = document.querySelector('.two-room');
 
 const allRoomDe = document.querySelector('.all-room-detail');
-const oneRoomDe = document.querySelector('.one-room-detail');
+const oneRoomDe = document.querySelector('.write-detail');
 const twoRoomDe = document.querySelector('.two-room-detail');
 
 function allRoom_open() {
