@@ -16,7 +16,7 @@ include("../../api/router/house/viewHouse.php");
   <link rel="stylesheet" href="../../front/css/switch.css?fdsfsdf">
   <link rel="stylesheet" href="../../front/css/menuBar.css">
   <link rel="stylesheet" href="../../front/css/mapSub.css">
-  <link rel="stylesheet" href="../../front/css/submap.css">
+  <link rel="stylesheet" href="../../front/css/submap.css?wewewe">
   <link rel="stylesheet" href="../../front/css/comment.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -118,41 +118,30 @@ include("../../api/router/house/viewHouse.php");
       <div class="building write-detail">
         <div class="map_side_sub_02">
           <span class="map_side_menu_02 all-room">
-            <div class="back-review">
-              <a class="material-symbols-outlined" href="javascript:review_open();">&nbsp;arrow_back</a>
-            </div>
+            <a href="#" onclick="history.back();">
+              <span class="material-symbols-outlined">&nbsp;arrow_back</span>
+            </a>
           </span>
           <span class="map_side_menu_02 one-room">
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $row["COL 5"] ?> <?php echo $row["COL 11"] ?>
           </span>
         </div>
         <div class="loop-bilding all-room-detail" style="overflow-y:auto; overflow-x:hidden; width:100%; height:810px;">
-          <form class="board_write_wrap" method="POST" action="../../api/router/bbs/writeBbs.php">
+          <form class="board_write_wrap" method="POST" action="javascript:void()">
             <div class="board_write">
               <div class="title">
                 <dl>
-                  <dt>제목</dt>
-                  <dd><input type="text" name="title" id="title" placeholder="제목 입력"></dd>
+                  <dt class="title" style="display:flex; justify-content: center;">리뷰 작성</dt>
+                  <dd class="title-input"><input type="text" name="title" id="title" placeholder="제목 입력"></dd>
                 </dl>
               </div>
-              <hr />
-              <!--div class="info">
-            <dl>
-              <dt>글쓴이</dt>
-              <dd><input type="text" name="" id="" placeholder="글쓴이 입력"></dd>
-            </dl>
-            <dl>
-              <dt>비밀번호</dt>
-              <dd><input type="password" name="" id="" placeholder="비밀번호 입력"></dd>
-            </dl>
-          </div -->
               <div class="cont">
                 <textarea placeholder="내용 입력" name="description" id="description"></textarea>
               </div>
             </div>
             <div class="bt_wrap">
-              <button id="" type="submit" class="btn">등록</button>
-              <a href="../../front/board/board.php" class="btn">취소</a>
+              <button id="" type="" class="btn">등록</button>
+              <a href="javascript:review_open()" class="btn">취소</a>
             </div>
           </form>
         </div>
