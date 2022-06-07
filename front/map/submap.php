@@ -110,6 +110,12 @@ include("../../api/router/house/viewHouse.php");
             <div class="write-review">
               <a href="javascript:write_open();">리뷰 쓰기</a>
             </div>
+						<br/>
+						<div>
+							<ul>
+								<?php include("../../api/router/review/review.php")?>
+							</ul>
+						</div>
           </div>
         </div>
       </div>
@@ -123,11 +129,11 @@ include("../../api/router/house/viewHouse.php");
             </a>
           </span>
           <span class="map_side_menu_02 one-room">
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $row["COL 5"] ?> <?php echo $row["COL 11"] ?>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $row["COL 5"] ?> <?php echo $row["COL 11"] ?> 
           </span>
         </div>
         <div class="loop-bilding all-room-detail" style="overflow-y:auto; overflow-x:hidden; width:100%; height:810px;">
-          <form class="board_write_wrap" method="POST" action="javascript:void()">
+          <form class="board_write_wrap" method="POST" action="../../api/router/notice/addreview.php?houseId=<?php echo $_GET['houseId'] ?>">
             <div class="board_write">
               <div class="title">
                 <dl>
@@ -140,7 +146,7 @@ include("../../api/router/house/viewHouse.php");
               </div>
             </div>
             <div class="bt_wrap">
-              <button id="" type="" class="btn">등록</button>
+              <button id="" type="submit" class="btn">등록</button>
               <a href="javascript:review_open()" class="btn">취소</a>
             </div>
           </form>
